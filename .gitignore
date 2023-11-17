@@ -1,3 +1,4 @@
+/.angular/cache
 *.css.map
 *.js.map
 .DS_Store
