@@ -31,8 +31,6 @@
   },
   "homepage": "https://github.com/ackerapple/agm-overlays#readme",
   "devDependencies": {
-    "@agm/core": "^1.1.0",
-    "@agm/js-marker-clusterer": "^1.1.0",
     "@angular-devkit/build-angular": "^0.1002.4",
     "@angular/cli": "^10.2.4",
     "@angular/common": "^10.2.5",
