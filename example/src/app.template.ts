@@ -3,7 +3,6 @@ export const template =
 <table cellPadding="0" cellSpacing="0" border="0" style="width:100%;height:100%">
   <tr>
     <td valign="top" colspan="2">
-      <div style="float:right;font-size:.8em;">v{{version}}</div>
       <h2 style="margin:0;">💥 agm-overlays</h2>
       <div style="text-align:center;font-size:.8em;">
         <a href="https://github.com/AckerApple/agm-overlays/blob/master/example/src/app.component.ts">view component</a>

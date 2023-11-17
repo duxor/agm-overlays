@@ -10,10 +10,9 @@ import {
   template:template,
   styles:['.block {justify-content:center;align-items:center;display:flex;width:50px;height:50px;background-color:blue;}']
 }) export class AppComponent{
-  markerEdit:exampleLatLng
-  view:"data"
-  destroyMap:boolean
-  version:string = packJson['version']
+  markerEdit: exampleLatLng | undefined
+  view: "data" | null = null;
+  destroyMap: boolean | undefined
   latLngArray:exampleLatLng[] = points
   resizesPoint:exampleLatLng = resizesPoint
 
@@ -22,7 +21,7 @@ import {
     this.latLngArray = json
   }
 
-  toNumber(value){
+  toNumber(value: string) {
     return Number(value)
   }
 }

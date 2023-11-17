@@ -7,11 +7,10 @@ import {
 } from "@angular/core"
 
 import {
-  AgmInfoWindow, LatLngBounds, LatLng, MarkerManager,
-  GoogleMapsAPIWrapper, AgmMarker
-} from "@agm/core"
+  AgmInfoWindow, MarkerManager,
+  GoogleMapsAPIWrapper
+} from "@grupo-san-cristobal/agm-core"
 
-import { GoogleMap } from "@agm/core/services/google-maps-types"
 declare var google: any
 
 export interface latLng{
@@ -34,12 +33,12 @@ export interface latLngPlus{
   selector:"agm-overlay",
   template:'<div #content><div style="position:absolute"><ng-content></ng-content></div></div>'
 }) export class AgmOverlay{
-  @Input() latitude:number
-  @Input() longitude:number
+  @Input() latitude!: number
+  @Input() longitude!: number
   
-  @Input() visible: boolean = true//possibly doesn't work and just left over from agm-core marker replication
+  @Input() visible: boolean = true
   @Input() zIndex: number = 1
-  @Input() bounds:bounds
+  @Input() bounds!: bounds
   
   //TIP: Do NOT use this... Just put (click) on your html overlay element
   @Output() markerClick: EventEmitter<void> = new EventEmitter<void>()
@@ -50,10 +49,10 @@ export interface latLngPlus{
   //TODO, implement this
   @Input('markerDraggable') draggable: boolean = false
 
-  @ViewChild('content', { read: ElementRef }) template: ElementRef
+  @ViewChild('content', { read: ElementRef }) template!: ElementRef
 
-  destroyed:boolean
-  overlayView:any
+  destroyed!: boolean
+  overlayView!: any
   //elmGuts:any
   private _observableSubscriptions: Subscription[] = []
 
@@ -78,13 +77,13 @@ export interface latLngPlus{
     this.infoWindow.changes.subscribe(() => this.handleInfoWindowUpdate());
   }
 
-  ngOnChanges( changes ){
+  ngOnChanges(changes: any) {
     this.onChanges(changes)
   }
 
-  onChanges( changes ){}
+  onChanges(changes: any) { }
 
-  onChangesOverride( changes ){
+  onChangesOverride(changes: any) {
     if( changes.latitude || changes.longitude || changes.zIndex ){
       this.overlayView.latitude = this.latitude
       this.overlayView.longitude = this.longitude
@@ -97,10 +96,10 @@ export interface latLngPlus{
     this.destroy()
   }
 
-  destroy():Promise<any>{
+  destroy(): any {
     this.destroyed = true
 
-    const promise = this._markerManager.deleteMarker( this.overlayView )
+    this._markerManager.deleteMarker(this.overlayView)
     
     if( this.overlayView ){
       if( this.overlayView.div ){
@@ -113,8 +112,6 @@ export interface latLngPlus{
     
     delete this.overlayView
     //delete this.elmGuts
-
-    return promise
   }
   
   private handleInfoWindowUpdate() {
@@ -127,23 +124,23 @@ export interface latLngPlus{
     });
   }
 
-  load():Promise<void>{
+  load(): Promise<any> {
     return this._mapsWrapper.getNativeMap()
     .then(map=>{
       const overlay = this.getOverlay( map )
 
-      this._markerManager.addMarker( <any>overlay )
+      this._markerManager.addMarker(overlay)
       this._addEventListeners()
 
       return this._markerManager.getNativeMarker( overlay )
     })
-    .then(nativeMarker=>{
+      .then((nativeMarker: any) => {
       const setMap = nativeMarker.setMap
       if( nativeMarker['map'] ){
         this.overlayView.setMap( nativeMarker['map'] )
       }
 
-      nativeMarker.setMap = (map)=>{
+      nativeMarker.setMap = (map: any) => {
         setMap.call(nativeMarker,map)
 
         if( this.overlayView ){
@@ -153,7 +150,7 @@ export interface latLngPlus{
     })
   }
 
-  getOverlay( map ){
+  getOverlay(map: any) {
     this.overlayView = this.overlayView || new google.maps.OverlayView()
 
     /* make into foo marker that AGM likes */
@@ -181,7 +178,7 @@ export interface latLngPlus{
     //const elm =  this.elmGuts || this.template.nativeElement.children[0]
 
     //we must always be sure to steal our stolen element back incase we are just in middle of changes and will redraw
-    const restore = (div)=>{
+    const restore = (div: any) => {
       this.template.nativeElement.appendChild( div )
     }
 
@@ -231,7 +228,7 @@ export interface latLngPlus{
       }
     }
 
-    elm.addEventListener("click", event=>{
+    elm.addEventListener("click", (event: any) => {
       this.handleTap()
       event.stopPropagation()
     })
@@ -247,7 +244,7 @@ export interface latLngPlus{
         infoWindow.open()
       })
     }
-    this.markerClick.emit(null);
+    this.markerClick.emit();
   }
 
   _addEventListeners(){
