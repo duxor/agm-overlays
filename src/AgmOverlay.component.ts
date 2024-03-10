@@ -1,15 +1,15 @@
-import { Subscription } from "rxjs"
-
+import { Subscription } from "rxjs";
 import {
-  Input, Component, Output, EventEmitter,
-  TemplateRef, ViewChild, ElementRef, QueryList,
-  ContentChildren
-} from "@angular/core"
-
-import {
-  AgmInfoWindow, MarkerManager,
-  GoogleMapsAPIWrapper
-} from "@grupo-san-cristobal/agm-core"
+  Component,
+  ContentChildren,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  ViewChild
+} from "@angular/core";
+import { AgmInfoWindow, GoogleMapsAPIWrapper, MarkerManager } from "@duxor/agm-core";
 
 declare var google: any
 
@@ -126,7 +126,7 @@ export interface latLngPlus{
 
   load(): Promise<any> {
     return this._mapsWrapper.getNativeMap()
-    .then(map=>{
+    .then((map: any) => {
       const overlay = this.getOverlay( map )
 
       this._markerManager.addMarker(overlay)

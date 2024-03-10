@@ -1,5 +1,5 @@
 {
-  "name": "agm-overlays",
+  "name": "@duxor/agm-overlays",
   "version": "17.0.0",
   "description": "Custom marker overlay for the @agm/core package",
   "main": "dist/index",
@@ -39,9 +39,9 @@
     "@angular/core": "^17.2.4",
     "@angular/platform-browser": "^17.2.4",
     "@angular/platform-browser-dynamic": "^17.2.4",
-    "@google/markerclustererplus": "^5.0.4",
     "@duxor/agm-core": "^17.0.0",
     "@duxor/agm-markerclusterer": "^17.0.2",
+    "@google/markerclustererplus": "^5.0.4",
     "@types/google.maps": "^3.53.4",
     "js-marker-clusterer": "^1.0.0",
     "ng-packagr": "^17.2.1",

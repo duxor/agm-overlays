@@ -1,12 +1,12 @@
-import { NgModule } from "@angular/core"
-import { BrowserModule } from '@angular/platform-browser'
-import { AgmCoreModule } from "@grupo-san-cristobal/agm-core"
-import { AppComponent } from "./app.component"
-import { AgmMarkerClustererModule } from '@grupo-san-cristobal/agm-markerclusterer';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@duxor/agm-core';
+import { AppComponent } from './app.component';
+import { AgmMarkerClustererModule } from '@duxor/agm-markerclusterer';
 
 //DO NOT USE BELOW
 //YOU NEED USE: import { AgmOverlays } from "agm-overlays"
-import { AgmOverlays } from "../../src"
+import { AgmOverlays } from '../../src';
 
 @NgModule({
   imports:[
@@ -19,4 +19,5 @@ import { AgmOverlays } from "../../src"
   ],
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ]
-}) export class AppModule{}
+})
+export class AppModule{}
