@@ -3,11 +3,11 @@ import { CommonModule } from "@angular/common";
 import { AgmOverlay } from "./AgmOverlay.component";
 import * as i0 from "@angular/core";
 export class AgmOverlays {
-    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, declarations: [AgmOverlay], imports: [CommonModule], exports: [AgmOverlay] });
-    static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, imports: [CommonModule] });
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, declarations: [AgmOverlay], imports: [CommonModule], exports: [AgmOverlay] });
+    static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, imports: [CommonModule] });
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

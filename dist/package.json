@@ -1,6 +1,6 @@
 {
   "name": "@duxor/agm-overlays",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "description": "Custom marker overlay for the @agm/core package",
   "main": "dist/index",
   "repository": {
@@ -21,6 +21,7 @@
     "url": "https://github.com/duxor/agm-overlays/issues"
   },
   "homepage": "https://github.com/duxor/agm-overlays#readme",
+  "private": true,
   "module": "fesm2022/duxor-agm-overlays.mjs",
   "typings": "index.d.ts",
   "exports": {

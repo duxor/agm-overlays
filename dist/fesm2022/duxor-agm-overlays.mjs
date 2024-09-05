@@ -175,10 +175,10 @@ class AgmOverlay {
         const cs = eo.subscribe(() => this.handleTap());
         this._observableSubscriptions.push(cs);
     }
-    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlay, deps: [{ token: i1.GoogleMapsAPIWrapper }, { token: i1.MarkerManager }], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.2.4", type: AgmOverlay, selector: "agm-overlay", inputs: { latitude: "latitude", longitude: "longitude", visible: "visible", zIndex: "zIndex", bounds: "bounds", openInfoWindow: "openInfoWindow", draggable: ["markerDraggable", "draggable"] }, outputs: { markerClick: "markerClick" }, queries: [{ propertyName: "infoWindow", predicate: AgmInfoWindow }], viewQueries: [{ propertyName: "template", first: true, predicate: ["content"], descendants: true, read: ElementRef }], usesOnChanges: true, ngImport: i0, template: '<div #content><div style="position:absolute"><ng-content></ng-content></div></div>', isInline: true });
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlay, deps: [{ token: i1.GoogleMapsAPIWrapper }, { token: i1.MarkerManager }], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.3", type: AgmOverlay, selector: "agm-overlay", inputs: { latitude: "latitude", longitude: "longitude", visible: "visible", zIndex: "zIndex", bounds: "bounds", openInfoWindow: "openInfoWindow", draggable: ["markerDraggable", "draggable"] }, outputs: { markerClick: "markerClick" }, queries: [{ propertyName: "infoWindow", predicate: AgmInfoWindow }], viewQueries: [{ propertyName: "template", first: true, predicate: ["content"], descendants: true, read: ElementRef }], usesOnChanges: true, ngImport: i0, template: '<div #content><div style="position:absolute"><ng-content></ng-content></div></div>', isInline: true });
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlay, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlay, decorators: [{
             type: Component,
             args: [{
                     selector: "agm-overlay",
@@ -210,11 +210,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.4", ngImpor
             }] } });
 
 class AgmOverlays {
-    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, declarations: [AgmOverlay], imports: [CommonModule], exports: [AgmOverlay] });
-    static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, imports: [CommonModule] });
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, declarations: [AgmOverlay], imports: [CommonModule], exports: [AgmOverlay] });
+    static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, imports: [CommonModule] });
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.4", ngImport: i0, type: AgmOverlays, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.3", ngImport: i0, type: AgmOverlays, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

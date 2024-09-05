@@ -1,6 +1,6 @@
 {
   "name": "@duxor/agm-overlays",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "description": "Custom marker overlay for the @agm/core package",
   "main": "dist/index",
   "scripts": {
@@ -31,25 +31,25 @@
   },
   "homepage": "https://github.com/duxor/agm-overlays#readme",
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.2.3",
-    "@angular/cli": "^17.2.3",
-    "@angular/common": "^17.2.4",
-    "@angular/compiler": "^17.2.4",
-    "@angular/compiler-cli": "^17.2.4",
-    "@angular/core": "^17.2.4",
-    "@angular/platform-browser": "^17.2.4",
-    "@angular/platform-browser-dynamic": "^17.2.4",
-    "@duxor/agm-core": "^17.0.1",
-    "@duxor/agm-markerclusterer": "^17.0.3",
+    "@angular-devkit/build-angular": "^18.2.3",
+    "@angular/cli": "^18.2.3",
+    "@angular/common": "^18.2.3",
+    "@angular/compiler": "^18.2.3",
+    "@angular/compiler-cli": "^18.2.3",
+    "@angular/core": "^18.2.3",
+    "@angular/platform-browser": "^18.2.3",
+    "@angular/platform-browser-dynamic": "^18.2.3",
+    "@duxor/agm-core": "^18.0.0",
+    "@duxor/agm-markerclusterer": "^18.0.0",
     "@google/markerclustererplus": "^5.0.4",
     "@types/google.maps": "^3.53.4",
     "js-marker-clusterer": "^1.0.0",
-    "ng-packagr": "^17.2.1",
+    "ng-packagr": "^18.2.1",
     "npm-run-all": "^4.1.5",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "typescript": "^5.3.3",
-    "zone.js": "^0.14.4"
+    "typescript": "^5.5.4",
+    "zone.js": "^0.14.10"
   },
   "private": true
 }
