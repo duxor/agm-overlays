@@ -5,9 +5,9 @@
   "main": "dist/index",
   "scripts": {
     "build": "npm-run-all build:dist:js update:dist build:example",
-    "build:dist:js": "ng-packagr -p package.json",
+    "build:dist:js": "ng-packagr",
     "update:dist": "node scripts/update-dist-package.js",
-    "build:example": "ng build example --prod",
+    "build:example": "ng build example --configuration=production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run watch",
     "watch": "ng serve example --port 4202 --open"
@@ -39,8 +39,8 @@
     "@angular/core": "^17.2.4",
     "@angular/platform-browser": "^17.2.4",
     "@angular/platform-browser-dynamic": "^17.2.4",
-    "@duxor/agm-core": "^17.0.0",
-    "@duxor/agm-markerclusterer": "^17.0.2",
+    "@duxor/agm-core": "^17.0.1",
+    "@duxor/agm-markerclusterer": "^17.0.3",
     "@google/markerclustererplus": "^5.0.4",
     "@types/google.maps": "^3.53.4",
     "js-marker-clusterer": "^1.0.0",
@@ -51,10 +51,5 @@
     "typescript": "^5.3.3",
     "zone.js": "^0.14.4"
   },
-  "private": true,
-  "ngPackage": {
-    "lib": {
-      "entryFile": "src/index.ts"
-    }
-  }
+  "private": true
 }
